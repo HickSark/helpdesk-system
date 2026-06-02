@@ -13,8 +13,8 @@ def create_app():
     
     db.init_app(app)
     
-    # Registrar blueprints
-    from app.routes import main_bp
+    # Registrar blueprints diretamente
+    from app.routes.main import main_bp
     from app.routes.usuarios import usuarios_bp
     
     app.register_blueprint(main_bp)
